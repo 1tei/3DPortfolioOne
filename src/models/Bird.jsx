@@ -9,19 +9,17 @@ const Bird = () => {
     const { actions } = useAnimations(animations, birdRef)
   
   useEffect(() => {
-    actions['Take 001'].play();
+    actions['Fly 2'].play();
   }, [])
 
   useFrame(({ clock, camera }) => {
-    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
-
-    if(birdRef.current.position.x > camera.position.x + 10) {
-      birdRef.current.rotation.y = Math.PI;
-    } else if (birdRef.current.position.x < camera.position.x - 10) {
-      birdRef.current.rotation.y = 0;
+    if(birdRef.current.position.x > camera.position.x + 5 ) {
+      birdRef.current.rotation.y = 5.5;
+    } else if (birdRef.current.position.x < camera.position.x - 5) {
+      birdRef.current.rotation.y = 2.3;
     }
 
-    if(birdRef.current.rotation.y === 0) {
+    if(birdRef.current.rotation.y === 2.3) {
       birdRef.current.position.x += 0.01;
       birdRef.current.position.z -= 0.01;
     } else {
@@ -34,8 +32,9 @@ const Bird = () => {
 
     return (
     <mesh 
-      position={[-5, 2, 1]} 
-      scale={[0.003, 0.003, 0.003]}
+      position={[-8, 2, -5]} 
+      scale={[0.1, 0.1, 0.1]}
+      rotation={[0, 2.3, 0]}
       ref={birdRef}> 
         <primitive object={scene}/>
     </mesh>

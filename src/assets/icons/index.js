@@ -4,7 +4,11 @@ import git from './git.svg'
 import github from './github.svg'
 import html from './html.svg'
 import javascript from './javascript.svg'
-import mongodb from './mongodb.svg'
+import laravel from './laravel.svg'
+import freelance from './freelance.svg'
+import cgi from './cgi.svg'
+import truck from './truck.svg'
+import mysql from './mysql.svg'
 import motion from './motion.svg'
 import mui from './mui.svg'
 import nextjs from './nextjs.svg'
@@ -34,10 +38,14 @@ export {
     github,
     html,
     javascript,
-    mongodb,
+    mysql,
     motion,
     mui,
     nextjs,
+    freelance,
+    truck,
+    cgi,
+    laravel,
     nodejs,
     react,
     redux,

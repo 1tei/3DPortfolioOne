@@ -8,7 +8,7 @@ const Plane = ({ isRotating, ...props }) => {
   const { actions } = useAnimations(animations, ref);
 
   useEffect(() =>  {
-      actions['Take 001'].play();
+      actions['Animation'].play();
   }, [actions, isRotating])
 
   return (
